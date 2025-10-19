@@ -25,13 +25,7 @@ It’s perfect for learners preparing for technical interviews, competitive prog
 
 ```
 LeetCode-Solutions/
-├── Arrays/
-│   ├── ProblemName.cpp
-│   └── README.md
-├── Trees/
-│   ├── ProblemName.cpp
-│   └── README.md
-├── DynamicProgramming/
+├── ProblemName/
 │   ├── ProblemName.cpp
 │   └── README.md
 |   .
