@@ -13,7 +13,7 @@ public:
                 j++;
             }
         }
-        if (minL == INT_MAX) return 0;
+        if(minL == INT_MAX) return 0;
         return minL;
     }
 };
