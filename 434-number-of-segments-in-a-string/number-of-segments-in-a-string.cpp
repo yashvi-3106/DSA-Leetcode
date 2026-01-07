@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int countSegments(string s) {
+        int res = 0;
+        for (int i = 0; i < s.size(); i++) {
+            if (s[i] != ' ') res++;
+            while (i < s.size() && s[i] != ' '){
+                i++;
+            }
+        }
+        return res;
+    }
+};
+
+// class Solution {
+// public:
+//     int countSegments(string s) {
+//         int count = 0;
+//         bool inSegment = false;
+//         for (char c : s) {
+//             if (c != ' ' && !inSegment) {
+//                 count++;
+//                 inSegment = true;
+//             } else if (c == ' ') {
+//                 inSegment = false;
+//             }
+//         }
+//         return count;
+//     }
+// };
