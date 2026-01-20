@@ -1,16 +1,14 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if (s.length() != t.length()) return false;
+        if(s.length() != t.length()) return false;
         map<char,int> freq;
-        for(int i = 0; i< s.length() ; i++){
+        for(int i = 0; i < s.length(); i++){
             freq[s[i]]++;
         }
-        for(int  i = 0; i < t.size() ; i++){
+        for(int i = 0; i < t.length(); i++){
             freq[t[i]]--;
-            if(freq[t[i]] < 0 ){
-                return false;
-            }
+            if(freq[t[i]] < 0) return false;
         }
         return true;
     }
@@ -51,15 +49,5 @@ public:
 //         }
 
 //         return true;
-//     }
-// };
-
-
-// class Solution {
-// public:
-//     bool isAnagram(string s, string t) {
-//         sort(s.begin(), s.end());
-//         sort(t.begin(), t.end());
-//         return s == t;
 //     }
 // };
