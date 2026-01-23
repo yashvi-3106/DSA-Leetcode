@@ -4,11 +4,11 @@ public:
         int white = 0;
         int blue = nums.size() - 1;
         int red = 0;
-        while(white<=blue){
-            if(nums[white]==0){
+        while(white <= blue){
+            if(nums[white] == 0){
                 swap(nums[white],nums[red]);
-                white++;
                 red++;
+                white++;
             }else if(nums[white] == 1){
                 white++;
             }else{
