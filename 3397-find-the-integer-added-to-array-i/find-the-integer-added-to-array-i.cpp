@@ -1,16 +1,28 @@
 class Solution {
 public:
-    int addedInteger(vector<int>& nums1, vector<int>& nums2) {
-        for(int i = nums1.size() - 1; i >= 1; i--){
-            if(nums1[i] > nums1[i-1]){
-                swap(nums1[i],nums1[i-1]);
-            }
-        }
-        for(int i = nums2.size() - 1; i >= 1; i--){
-            if(nums2[i] > nums2[i-1]){
-                swap(nums2[i],nums2[i-1]);
-            }
-        }
-        return nums2[0] - nums1[0];
+    int addedInteger(vector<int>& nums1, vector<int>& nums2){
+        int min1 = INT_MAX, min2 = INT_MAX;
+        for(auto x : nums1) min1 = min(min1, x);
+        for(auto x : nums2) min2 = min(min2, x);
+
+        return min2 - min1;
     }
 };
+
+
+// class Solution {
+// public:
+//     int addedInteger(vector<int>& nums1, vector<int>& nums2) {
+//         for(int i = nums1.size() - 1; i >= 1; i--){
+//             if(nums1[i] > nums1[i-1]){
+//                 swap(nums1[i],nums1[i-1]);
+//             }
+//         }
+//         for(int i = nums2.size() - 1; i >= 1; i--){
+//             if(nums2[i] > nums2[i-1]){
+//                 swap(nums2[i],nums2[i-1]);
+//             }
+//         }
+//         return nums2[0] - nums1[0];
+//     }
+// };
