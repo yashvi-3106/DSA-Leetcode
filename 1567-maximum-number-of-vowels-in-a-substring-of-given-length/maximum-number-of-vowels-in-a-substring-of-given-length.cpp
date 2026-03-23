@@ -12,10 +12,10 @@ public:
             if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u'){
                 count++;
             }
-            if(s[i-k] == 'a' || s[i-k] == 'e' || s[i-k] == 'i' || s[i-k] == 'o' || s[i-k] == 'u'){
+            if(s[i - k] == 'a' || s[i - k] == 'e' || s[i - k] == 'i' || s[i - k] == 'o' || s[i - k] == 'u'){
                 count--;
             }
-            maxCount = max(maxCount,count);
+            maxCount = max(maxCount, count);
         }
         return maxCount;
     }
