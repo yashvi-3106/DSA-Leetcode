@@ -6,13 +6,11 @@
  *               otherwise return 0
  * int guess(int num);
  */
-
  
 class Solution {
 public:
     int guessNumber(int n) {
         int left = 1, right = n;
-
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (guess(mid) == 0) {
