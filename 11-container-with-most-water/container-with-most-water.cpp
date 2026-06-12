@@ -6,9 +6,9 @@ public:
         while(l < r){
             int h = min(height[l],height[r]);
             int w = r - l;
-            maxWater = max(maxWater,h * w);
-            if(height[l] > height[r]) r--;
-            else l++;
+            maxWater = max(maxWater, h*w);
+            if(height[l] < height[r]) l++;
+            else r--;
         }
         return maxWater;
     }
