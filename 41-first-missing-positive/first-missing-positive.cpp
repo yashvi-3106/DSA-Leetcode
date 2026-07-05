@@ -4,7 +4,7 @@ public:
         int i = 0;
         while (i < nums.size()) {
             if (nums[i] > 0 && nums[i] <= nums.size()) {
-                int corr = nums[i] - 1;   // SAFE now
+                int corr = nums[i] - 1;   
                 if (nums[i] != nums[corr]) {
                     swap(nums[i], nums[corr]);
                     continue;
