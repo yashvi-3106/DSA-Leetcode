@@ -8,14 +8,13 @@ public:
             freq[nums[i]]++;
         }
         if(freq.size() == k) maxSum = sum;
-        for(int i = k ; i < nums.size(); i++){
+        for(int i = k; i < nums.size(); i++){
             sum += nums[i];
             freq[nums[i]]++;
-            sum -= nums[i - k];
-            freq[nums[i - k]]--;
+            sum -= nums[i-k];
+            freq[nums[i-k]]--;
 
-            if(freq[nums[i - k]] == 0) freq.erase(nums[i-k]);
-
+            if(freq[nums[i-k]] == 0) freq.erase(nums[i - k]);
             if(freq.size() == k) maxSum = max(maxSum, sum);
         }
         return maxSum;
