@@ -11,25 +11,13 @@
  */
 class Solution {
 public:
-    bool isValidBST(TreeNode* root) {
+    bool check(TreeNode* root,long long min,long long max){
         if(root == nullptr) return true;
-        stack<tuple<TreeNode*, long long, long long>> st;
-        st.push({root, LLONG_MIN, LLONG_MAX});
-        while(!st.empty()){
-            auto [node, low, high] = st.top();
-            st.pop();
-            if(node->val <= low || node->val >= high) return false;
-            if(node->left){
-                st.push({
-                    node->left,low,node->val
-                });
-            }
-            if(node->right){
-                st.push({
-                    node->right, node->val,high
-                });
-            }
-        }
-        return true;
+        if(root->val <= min || root->val >= max) return false;
+        return check(root->left,min,root->val) && check(root->right,root->val,max);
+    }
+
+    bool isValidBST(TreeNode* root) {
+        return check(root,LLONG_MIN,LLONG_MAX);
     }
 };
