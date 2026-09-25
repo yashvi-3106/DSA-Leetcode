@@ -11,7 +11,7 @@ public:
             int curr = pq.top();
             pq.pop();
             if(prev == curr) continue;
-            if(prev + 1 == curr){
+            if(curr - prev == 1){
                 currLen++;
             }else{
                 maxLen = max(maxLen,currLen);
